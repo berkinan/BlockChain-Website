@@ -2,12 +2,13 @@ import React from 'react'
 
 type Props = {
     title:string;
+    isActive?: boolean;
 }
 
 
-function NavButton({ title }:Props) {
+function NavButton({ title, isActive }:Props) {
   return (
-    <button className="bg-[]">
+    <button className={`${isActive && "bg-[#036756]"} hover:bg-[#036756] text-white py-2 px-4 rounded font-bold`}>
         {title}
     </button>
   )
