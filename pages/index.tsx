@@ -7,7 +7,7 @@ import {
 	useContract,
 	useMetamask,
 	useDisconnect,
-	useContractRead,
+	useContractRead,	
 	useContractWrite,
 	useAddress,
 	useContractMetadata,
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 	const { contract, isLoading } = useContract(
 		process.env.NEXT_PUBLIC_LOTTERY_CONTRACT_ADDRESS
 	);
-	const { data: expiration } = useContractRead(contract);
+	const { data: expiration } = useContractRead(contract, "expiration");
 	const { data: remainingTickets } = useContractRead(
 		contract,
 		"RemainingTickets"
@@ -45,11 +45,15 @@ const Home: NextPage = () => {
 		if (!ticketPrice) return;
 		const notificiation = toast.loading("Buying your tickets...");
 		try {
-			const data = await BuyTickets({
-				value: ethers.utils.parseEther(
-					(Number(ethers.utils.formatEther(ticketPrice)) * quantity).toString()
-				),
-			});
+			const data = await BuyTickets([
+				{
+					value: ethers.utils.parseEther(
+						(
+							Number(ethers.utils.formatEther(ticketPrice)) * quantity
+						).toString()
+					),
+				}
+			]);
 		} catch (err) {
 			toast.error("Whoops something went wrong!", {
 				id: notificiation,

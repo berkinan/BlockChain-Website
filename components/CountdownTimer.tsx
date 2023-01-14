@@ -1,6 +1,6 @@
 import React from "react";
 //@ts-ignore
-import { useContract, useContractData } from "@thirdweb-dev/react";
+import { useContract, useContractRead } from "@thirdweb-dev/react";
 import Countdown from "react-countdown";
 
 type Props = {
@@ -15,7 +15,7 @@ function CountdownTimer() {
 		process.env.NEXT_PUBLIC_LOTTERY_CONTRACT_ADRESS
 	);
 
-	const { data: expiration, isLoading: isLoadingExpiration } = useContractData(
+	const { data: expiration, isLoading: isLoadingExpiration } = useContractRead(
 		contract,
 		"expiration"
 	);
