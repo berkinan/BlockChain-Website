@@ -9,9 +9,9 @@ import { useState } from 'react'
 const Home: NextPage = () => {
   const address = useAddress();
   const[quantity, setQuantity] = useState<number>(1);
-  const {contract, isLoading} = useContract(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS)
+  const {contract, isLoading} = useContract(process.env.NEXT_PUBLIC_LOTTERY_CONTRACT_ADDRESS)
 
-  // if (isLoading) return <Loading />;
+  if (isLoading) return <Loading />;
   if (!address) return <Login />;
 
   return (
