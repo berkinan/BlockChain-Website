@@ -12,8 +12,11 @@
     "ethers": "^5.7.2",
     "next": "latest",
     "react": "18.2.0",
+    "react-countdown": "^2.3.5",
     "react-dom": "18.2.0",
-    "react-spinners": "^0.13.7"
+    "react-hot-toast": "^2.4.0",
+    "react-spinners": "^0.13.7",
+    "thirdweb": "^0.9.8"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
