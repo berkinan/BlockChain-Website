@@ -12,7 +12,7 @@ type Props = {
 
 function CountdownTimer() {
 	const { contract } = useContract(
-		process.env.NEXT_PUBLIC_LOTTERY_CONTRACT_ADDRESS
+		process.env.NEXT_PUBLIC_LOTTERY_CONTRACT_ADRESS
 	);
 
 	const { data: expiration, isLoading: isLoadingExpiration } = useContractRead(
@@ -24,7 +24,7 @@ function CountdownTimer() {
 		if (completed) {
 			return (
 				<div>
-					<h2 className="text-white text-xl text-center  ">
+					<h2 className="text-white text-xl text-center animate-bounce ">
 						Ticket Sales have now CLOSED for this draw
 					</h2>
 					<div className="flex space-x-6">
@@ -68,7 +68,7 @@ function CountdownTimer() {
 
 	return (
 		<div>
-			<Countdown date={new Date(Number(expiration) * 1000)} renderer={renderer} />
+			<Countdown date={new Date(expiration * 1000)} renderer={renderer} />
 		</div>
 	);
 }
