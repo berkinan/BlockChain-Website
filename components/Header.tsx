@@ -1,7 +1,6 @@
 import React from "react";
 import NavButton from "./NavButton";
 import { useAddress, useDisconnect } from "@thirdweb-dev/react";
-import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 
 function Header() {
 	const address = useAddress();

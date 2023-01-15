@@ -73,8 +73,6 @@ const Home: NextPage = () => {
 		setUserTickets(noOfUserTickets);
 	}, [tickets, address]);
 
-	console.log(UserTickets);
-
 	const handleClick = async () => {
 		if (!ticketPrice) return;
 		const notificiation = toast.loading("Buying your tickets...");
