@@ -64,9 +64,9 @@ function AdminControls() {
         const notificiation = toast.loading("Restarting draw...");
 
         try{
-			const data = await RefundAll([{}]);
+			const data = await restartDraw([{}]);
 
-			toast.success("All refunded successfully!", {id: notificiation,});
+			toast.success("Restarted Successfully!", {id: notificiation,});
 
             console.info("contract call success", {id: notificiation,});
 		} catch(err){

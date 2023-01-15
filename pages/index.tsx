@@ -88,6 +88,7 @@ const Home: NextPage = () => {
 					),
 				},
 			]);
+			toast.success(`Bought ${quantity} tickets`, {id: notificiation,});
 		} catch (err) {
 			toast.error("Whoops something went wrong!", {
 				id: notificiation,
