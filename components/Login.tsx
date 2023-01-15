@@ -5,18 +5,13 @@ function Login() {
 	const connectwithMetamask = useMetamask();
 
 	return (
-		<div className="bg-[#091B18] min-h-screen flex flex-col items-center justify-center text-center">
-			<div className="flex flex-col items-center mb-10">
-				<img
-					className="rounded-full h-56 w-56 mb-10"
-					src="https://i.imgur.com/4h7mAu7.png"
-					alt=""
-				/>
-				<h1 className="text-6xl font-bold text-white">Blockchain Lottery</h1>
+		<div className="bg-[#ffffff] min-h-screen flex flex-col items-center justify-center text-center">
+			<div className="flex flex-col items-center mb-20">
+			<p className="Header-logo logo-big">SuLottery</p>
 
 				<button
 					onClick={connectwithMetamask}
-					className="bg-white px-8 py-5 mt-10 rounded-lg shadow-lg font-bold"
+					className="bg-[#173A6A] text-white px-8 py-5 mt-10 shadow-lg font-bold"
 				>
 					Login with Metamask
 				</button>

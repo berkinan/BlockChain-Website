@@ -116,7 +116,7 @@ const Home: NextPage = () => {
 	if (!address) return <Login />;
 
 	return (
-		<div className="bg-[#091B18] min-h-screen flex flex-col">
+		<div className="bg-[#ffffff] min-h-screen flex flex-col">
 			<Head>
 				<title>group2project</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -125,7 +125,7 @@ const Home: NextPage = () => {
 			
 			<div className="flex-1">
 				<Header />
-				<Marquee className="bg-[#0A1F1C] p-5 mb-5" gradient={false} speed={100}>
+				<Marquee className="bg-[#173A6A] p-5 mb-5" gradient={false} speed={100}>
 
 					<div className="flex space-x-2 mx-10">
 						<h4 className="text-white font-bold">Last Winner: {lastWinner?.toString()}</h4>
@@ -143,8 +143,8 @@ const Home: NextPage = () => {
 				)}
 				{winnings > 0 && (
 					<div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto mt-5">
-						<button onClick={onWithdrawWinnings} className="p-5 bg-gradient-to-b from-orange-500 to-emerald-600 animate-pulse text-center rounded-xl w-full">
-							<p className="font-bold ">Winner Winner Chicken Dinner!</p>
+						<button onClick={onWithdrawWinnings} className="p-5 bg-gradient-to-b text-white from-blue-400 to-blue-800 text-center rounded-xl w-full">
+							<p className="font-bold ">Winner!</p>
 							<p> 
 								Total Winnings: {ethers.utils.formatEther(winnings.toString())}{" "}{currency}
 							</p>
@@ -193,7 +193,7 @@ const Home: NextPage = () => {
 									{currency}
 								</p>
 							</div>
-							<div className="flex text-white items-center space-x-2 bg-[#091B18] border-[#004337] border p-4">
+							<div className="flex text-white items-center space-x-2 bg-[#0b2242] border-[#ffffff] border p-4">
 								<p>TICKETS</p>
 								<input
 									className="flex w-full bg-transparent text-right outline-none"
@@ -206,7 +206,7 @@ const Home: NextPage = () => {
 							</div>
 
 							<div className="space-y-2 mt-5">
-								<div className="flex items-center justify-between text-emerald-300 text-sm italic font-extrabold">
+								<div className="flex items-center justify-between text-blue-300 text-sm italic font-extrabold">
 									<p>Total cost of tickets</p>
 									<p>
 										{ticketPrice &&
@@ -215,7 +215,7 @@ const Home: NextPage = () => {
 										{currency}
 									</p>
 								</div>
-								<div className="flex items-center justify-between text-emerald-300 text-xs italic">
+								<div className="flex items-center justify-between text-blue-300 text-xs italic">
 									<p>Service fees</p>
 									<p>
 										{ticketComission &&
@@ -223,7 +223,7 @@ const Home: NextPage = () => {
 										{currency}
 									</p>
 								</div>
-								<div className="flex items-center justify-between text-emerald-300 text-xs italic">
+								<div className="flex items-center justify-between text-blue-300 text-xs italic">
 									<p>+ Network Fees</p>
 									<p>TBC</p>
 								</div>
@@ -234,7 +234,7 @@ const Home: NextPage = () => {
 									remainingTickets?.toNumber === 0
 								}
 								onClick={handleClick}
-								className="mt-5 w-full bg-gradient-to-br from-orange-500 to to-emerald-600 px-10 py-5 rounded-md font-semibold text-white shadow-xl disabled:from-gray-600 disabled:text-gray-100 disabled:to-gray-600 disabled:cursor-not-allowed"
+								className="mt-5 w-full bg-gradient-to-br from-blue-300 to-blue-800 px-10 py-5 rounded-md font-semibold text-white shadow-xl disabled:from-gray-600 disabled:text-gray-100 disabled:to-gray-600 disabled:cursor-not-allowed"
 							>
 								Buy {quantity} tickets for{" "} 
 								{ticketPrice &&
@@ -249,7 +249,7 @@ const Home: NextPage = () => {
 								<div className="flex max-w-sm flex-wrap gap-x-2 gap-y-2">
 									{Array(UserTickets).fill("").map((_, index) => (
 										<p key={index}
-											className = "text-emerald-300 h-20 w-12 bg-emerald-500/30 rounded-lg flex flex-shrink-0 items-center justify-center text-xs italic"
+											className = "text-white h-20 w-12 bg-[#2d5fa5] rounded-lg flex flex-shrink-0 items-center justify-center text-xs italic"
 										>
 											{index + 1}
 										</p>

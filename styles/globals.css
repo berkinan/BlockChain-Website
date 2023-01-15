@@ -6,16 +6,16 @@
 {
     .stats
     {
-        @apply bg-[#091F1C] text-white p-4 flex-1 rounded-md border-[#004337] border-2
+        @apply bg-[#173A6A] text-white p-4 flex-1 rounded-md border-[#ffffff] border
     }
 
     .stats-container
     {
-        @apply bg-[#091F1C] p-5 rounded-lg border-[#004337] border
+        @apply bg-[#173A6A] p-5 rounded-lg border-[#ffffff] border
     }
 
     .countdown {
-        @apply p-8 text-5xl text-center text-white rounded-lg lg:min-w-[150px] bg-[#013F34]
+        @apply p-8 text-5xl text-center text-white rounded-lg lg:min-w-[150px] bg-[#2d5fa5]
     }
     
     .countdown-label{
@@ -23,8 +23,30 @@
     }
 
     .admin-button {
-        @apply bg-[#091F1C] p-2 flex-1 rounded-md border-[#004337]
-        border-2 hover:bg-emerald-500/50
+        @apply bg-[#173A6A] p-2 flex-1 rounded-md border-[#ffffff]
+        border-2 hover:bg-blue-500/50
     }
     
+}
+
+.Header-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    background-color: #173A6A;
+    padding: 10px 20px;
+    color: white;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.logo-big {
+    font-size: 48px;
+}
+.Header-logo:hover {
+    color: white;
+    text-decoration: none;
+}
+.Header-logo:visited {
+    color: white;
+    text-decoration: none;
 }

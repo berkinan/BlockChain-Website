@@ -94,17 +94,17 @@ function AdminControls() {
 
 
   return (
-    <div className="text-white text-center px-5 py-3 rounded-md border-emerald-300/20 border">
+    <div className="text-blue-800 text-center px-5 py-3 rounded-md border-blue-800 border">
         <h2 className="font-bold">Admin Controls</h2>
         <p className="mb-5">Total Commision to be withdrawn: {" "}
         {totalCommission && ethers.utils.formatEther(totalCommission?.toString())}{" "}{currency}
         </p>
 
         <div className="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-            <button onClick={drawWinner} className="admin-button"><StarIcon className="h-6 mx-auto mb-2"/>Draw Winner</button>
-            <button onClick={onWithdrawCommission} className="admin-button"><CurrencyDollarIcon className="h-6 mx-auto mb-2"/>Withdraw Commission</button>
-            <button onClick={onRestartDraw} className="admin-button"><ArrowPathIcon className="h-6 mx-auto mb-2"/>Restart Draw</button>
-            <button onClick={onRefundAll} className="admin-button"><ArrowUturnDownIcon className="h-6 mx-auto mb-2"/>Refund All</button>
+            <button onClick={drawWinner} className="admin-button text-white"><StarIcon className="h-6 mx-auto mb-2"/>Draw Winner</button>
+            <button onClick={onWithdrawCommission} className="admin-button text-white"><CurrencyDollarIcon className="h-6 mx-auto mb-2"/>Withdraw Commission</button>
+            <button onClick={onRestartDraw} className="admin-button text-white"><ArrowPathIcon className="h-6 mx-auto mb-2"/>Restart Draw</button>
+            <button onClick={onRefundAll} className="admin-button text-white"><ArrowUturnDownIcon className="h-6 mx-auto mb-2"/>Refund All</button>
         </div>
     </div>
   );
