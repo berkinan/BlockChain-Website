@@ -60,6 +60,7 @@ function AdminControls() {
 		}
     };
 
+    
     const onRestartDraw = async () => {
         const notificiation = toast.loading("Restarting draw...");
 
