@@ -1,10 +1,8 @@
 import React from "react";
-import NavButton from "./NavButton";
-import { useAddress, useDisconnect } from "@thirdweb-dev/react";
+import { useAddress } from "@thirdweb-dev/react";
 
 function Header() {
 	const address = useAddress();
-	const disconnect = useDisconnect();
 	return (
 		<header className="grid grid-cols-2 md:grid-cols-5 justify-between items-center p-5">
 			<div className="flex items-center space-x-2">
